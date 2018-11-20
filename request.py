@@ -15,7 +15,8 @@ else:
     print "Usage: %s username" % (sys.argv[0],)
     sys.exit()
 
-token = util.prompt_for_user_token(username, scope, client_id, client_secret, redirect_uri)
+token = util.prompt_for_user_token(
+    username, scope, client_id, client_secret, redirect_uri)
 
 if token:
     sp = spotipy.Spotify(auth=token)
@@ -29,22 +30,34 @@ if token:
     username = uri.split(':')[2]
     playlist_id = uri.split(':')[4]
     results = sp.user_playlist(username, playlist_id)
-    
-    ofile  = open('Test.csv', "wb")
+
+    ofile = open('Test.csv', "wb")
     writer = csv.writer(ofile, quotechar='"', quoting=csv.QUOTE_ALL)
     print json.dumps(results['tracks']['items'][0], indent=4)
     writer.writerow([
-    	"Track Name",
-    	"Album Name",
-    	"Track Number"
+        "Track Name",
+        "Album Release Date",
+        "Total Tracks on Album",
+        "Popularity",
+        "Artists",
+        "Duration (ms)",
+        "Track Number"
     ])
     for track in results['tracks']['items']:
-    	writer.writerow([
-    		track['track']['name'], 
-    		track['track']['album']['name'],
-    		track['track']['track_number']
-    	])
+        if track['track']['album']['album_type'] == "album":
+            artists = ""
+            for artist in track['track']['artists']:
+                artists = artists + artist['name'].encode('utf-8') + ','
+            writer.writerow([
+                            track['track']['name'],
+                            track['track']['album']['release_date'],
+                            track['track']['album']['total_tracks'],
+                            track['track']['popularity'],
+                            artists,
+                            track['track']['duration_ms'],
+                            track['track']['track_number']
+                            ])
     ofile.close()
-	
+
 else:
     print "Can't get token for", username
