@@ -1,31 +1,29 @@
-Track Name,Album Name,Track Number
-Scale It Back - Radio Edit,Reconstructed : The Best Of DJ Shadow,6
-Letter To Hermione - 2015 Remastered Version,David Bowie (aka Space Oddity) [2015 Remastered Version],3
-Lit,Kiasmos,1
-Smells Like Teen Spirit,Black Radio,12
-These Days,Chelsea Girl,2
-Soothing,Semper Femina,1
-Velvet Gloves & Spit,"Sincerely, Future Pollution",1
-You Already Know,Evening/Morning,2
-Picture You,Picture You,2
-Sea Calls Me Home,Have You In My Wilderness,5
-I Want to Be Alone (Dialogue) - 2001 Remaster,Jackson C. Frank (2001 Remastered Version),8
-Remember Last Time,Avi Buffalo,9
-Spanish Sahara,Total Life Forever,5
-Miss You,Layourbattleaxedown,5
-Take Me,Sisyphus,2
-A Private Understanding,Relatives In Descent,1
-The Lengths,Rubber Factory,7
-Give Up,Low Roar,1
-Found You,Born Under Saturn,3
-Hard Drive,Baby I'm Bored (Deluxe),5
-Soft Pyramids,Different Damage,1
-End,Black Mirror: Hang the DJ (Music from the Original TV Series),17
-Farewell Sonata,I Tell A Fly,1
-Treasure,Beautiful Boy (Original Motion Picture Soundtrack),1
-Silurian Blue,Reflections - Mojave Desert,2
-Cold & Well-Lit Place,Thin Black Duke,1
-Ljudet Innan,Storm Corrosion (Special Edition),6
-Tonight I Feel Like Kafka,Parma Violets,6
-Contact,Come Now Sleep,1
-Velvet 4 Sale,In A Poem Unlimited,1
+"Track Name","Album Release Date","Total Tracks on Album","Popularity","First artists","Duration (ms)","Track Number"
+"Scale It Back - Radio Edit","2012-01-01","16","49","DJ Shadow,Little Dragon,","220026","6"
+"Letter To Hermione - 2015 Remastered Version","1969-11-04","9","39","David Bowie,","156960","3"
+"Lit","2014-10-27","8","48","Kiasmos,","384763","1"
+"Smells Like Teen Spirit","2012-01-01","12","42","Robert Glasper Experiment,","444800","12"
+"These Days","1967-10","10","61","Nico,","210666","2"
+"Soothing","2017-03-10","9","52","Laura Marling,","256906","1"
+"Velvet Gloves & Spit","2017-04-07","9","29","Timber Timbre,","274773","1"
+"Picture You","2015-02-17","10","30","The Amazing,","567371","2"
+"Sea Calls Me Home","2015-09-25","10","45","Julia Holter,","187360","5"
+"I Want to Be Alone (Dialogue) - 2001 Remaster","1965","15","40","Jackson C. Frank,","198146","8"
+"Remember Last Time","2010-04-27","10","33","Avi Buffalo,","448426","9"
+"Spanish Sahara","2010-05-07","11","60","Foals,","409560","5"
+"Miss You","2005-07-22","11","42","The Concretes,","230906","5"
+"Take Me","2014-03-18","11","35","Sisyphus,","357493","2"
+"A Private Understanding","2017-09-29","12","41","Protomartyr,","318078","1"
+"The Lengths","2004","13","52","The Black Keys,","294933","7"
+"Give Up","2011","12","36","Low Roar,","186600","1"
+"Found You","2015-05-01","13","4","Django Django,","283131","3"
+"Hard Drive","2003","24","34","Evan Dando,","194306","5"
+"Soft Pyramids","2002","12","33","Q And Not U,","244906","1"
+"End","2017-12-30","18","41","Sigur Rós,Alex Somers,","298493","17"
+"Farewell Sonata","2017-09-15","11","34","Benjamin Clementine,","275466","1"
+"Silurian Blue","2017-06-30","6","29","Floating Points,","421272","2"
+"Cold & Well-Lit Place","2017-05-05","8","32","Oxbow,","272040","1"
+"Ljudet Innan","2012-04-25","8","26","Storm Corrosion,Mikael Åkerfeldt,","620013","6"
+"Tonight I Feel Like Kafka","2016-05-06","13","37","Jealous of the Birds,","189106","6"
+"Contact","2007-01-01","10","33","As Cities Burn,","411506","1"
+"Velvet 4 Sale","2018-02-16","11","26","U.S. Girls,","224226","1"
