@@ -2,7 +2,7 @@ import sys
 import spotipy
 import spotipy.util as util
 import csv
-
+import json
 
 ofile = open('Test2.csv', "wb")
 writer = csv.writer(ofile, quotechar='"', quoting=csv.QUOTE_ALL)
@@ -13,24 +13,36 @@ writer.writerow([
     "Popularity",
     "Artists",
     "Duration (ms)",
-    "Track Number"
+    "Track Number",
+    "Key",
+    "Mode",
+    "Time Signature",
+    "Acousticness",
+    "Danceability",
+    "Energy",
+    "Instrumentalness",
+    "Liveness",
+    "Speechiness",
+    "Valence",
+    "Tempo"
 ])
 
 def print_playlist(sp, playlist):
     results = sp.category_playlists(playlist)
 
     items = results['playlists']['items']
-    count = 0
     for item in items:
         owner = item['owner']['display_name']
         id = item['id']
         tracks = sp.user_playlist_tracks(owner, id)['items']
+        
         for track in tracks:
             try:
                 if track['track']['album']['album_type'] == "album":
                     album_tracks = sp.album_tracks(track['track']['album']['id'])['items']
                     for album_track in album_tracks:
                         t = sp.track(album_track['uri'])
+                        audioFeatures = sp.audio_features([album_track['uri']])
                         artists = ""
                         for artist in t['artists']:
                             artists = artists + artist['name'].encode('utf-8') + ','
@@ -41,9 +53,22 @@ def print_playlist(sp, playlist):
                             t['popularity'],
                             artists,
                             t['duration_ms'],
-                            t['track_number']
+                            t['track_number'],
+                            audioFeatures[0]['key'],
+                            audioFeatures[0]['mode'],
+                            audioFeatures[0]['time_signature'],
+                            audioFeatures[0]['acousticness'],
+                            audioFeatures[0]['danceability'],
+                            audioFeatures[0]['energy'],
+                            audioFeatures[0]['instrumentalness'],
+                            audioFeatures[0]['liveness'],
+                            audioFeatures[0]['loudness'],
+                            audioFeatures[0]['speechiness'],
+                            audioFeatures[0]['valence'],
+                            audioFeatures[0]['tempo']
                         ])
             except TypeError:
+                print "TypeError"
                 pass
 
 scope = 'user-library-read'
