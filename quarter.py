@@ -4,7 +4,7 @@ import pandas as pd
 from sklearn.model_selection import KFold
 from sklearn.neural_network import MLPClassifier
 
-data = pd.read_csv("Data3.csv", index_col=0)
+data = pd.read_csv("Data2.csv", index_col=0)
 data = data.drop(columns = ["Album Release Date"])
 
 sentiment = data["Sentiment"]
