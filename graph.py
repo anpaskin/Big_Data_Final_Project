@@ -3,8 +3,7 @@ import plotly.plotly as py
 import plotly.graph_objs as go
 import pandas as pd
 
-# Create random data with numpy
-import numpy as np
+# create bar plot in plotly showing accuracy across different classifiers and labeling mechanisms
 
 plotly.tools.set_credentials_file(username='kaylascharfstein', api_key='QosEetZ0Dao7OFMLXzl6')
 
