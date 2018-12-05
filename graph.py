@@ -12,6 +12,7 @@ trace1 = go.Bar(
     y=[0.081465425, 0.253018069, 0.507755128],
     name='K Nearest Neighbors'
 )
+
 trace2 = go.Bar(
     x=['Track Number', 'Quartile', 'Half'],
     y=[0.059036924,	0.255705577, 0.48533729],
@@ -20,11 +21,17 @@ trace2 = go.Bar(
 
 trace3 = go.Bar(
     x=['Track Number', 'Quartile', 'Half'],
+    y=[0.009350214, 0.246927456, 0.50378018],
+    name='Linear SVC'
+)
+
+trace4 = go.Bar(
+    x=['Track Number', 'Quartile', 'Half'],
     y=[0.02, 0.25, 0.5],
     name='Random'
 )
 
-data = [trace1, trace2, trace3]
+data = [trace1, trace2, trace3, trace4]
 layout = go.Layout(
     barmode='group'
 )
